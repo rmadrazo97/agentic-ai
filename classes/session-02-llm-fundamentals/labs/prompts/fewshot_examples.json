@@ -1,0 +1,37 @@
+{
+  "examples": [
+    {
+      "article": "Tesla announced a 15% increase in electric vehicle deliveries for Q3, reaching 435,000 units globally. The surge was driven by strong demand in China and Europe, while production efficiency improvements at their Austin and Berlin facilities enabled the company to meet growing orders. CEO Elon Musk credited the success to improved battery technology and streamlined manufacturing processes. However, increased competition from traditional automakers entering the EV space poses challenges for maintaining market share. Tesla's stock price rose 8% following the announcement, with analysts projecting continued growth through 2024.",
+      "summary": [
+        "Tesla delivered 435,000 electric vehicles in Q3, a 15% increase",
+        "Strong demand in China and Europe drove growth", 
+        "Improved production efficiency and battery technology enabled success"
+      ]
+    },
+    {
+      "article": "A new study published in Nature reveals that urban green spaces can reduce air pollution by up to 60% in surrounding areas. Researchers from MIT analyzed data from 50 cities worldwide over five years, measuring particulate matter levels near parks, gardens, and tree-lined streets. The study found that trees and vegetation act as natural air filters, capturing pollutants and releasing oxygen. Cities with more green infrastructure showed significantly lower rates of respiratory diseases among residents. The research recommends that urban planners allocate at least 15% of city area to green spaces to maximize health benefits.",
+      "summary": [
+        "Urban green spaces reduce air pollution by up to 60%",
+        "MIT study analyzed 50 cities over five years",
+        "Researchers recommend 15% of city area be green space"
+      ]
+    },
+    {
+      "article": "Microsoft's latest quarterly earnings exceeded expectations, with cloud revenue growing 29% year-over-year to reach $23.4 billion. The Azure platform continues to gain market share against competitors, particularly in AI and machine learning services. Office 365 subscriptions increased by 12 million, bringing the total to 375 million active users. Gaming revenue also showed strong performance, with Xbox Game Pass reaching 34 million subscribers. However, Windows licensing revenue declined 3% due to slower PC sales globally. CEO Satya Nadella emphasized the company's focus on AI integration across all product lines as a key growth driver.",
+      "summary": [
+        "Microsoft cloud revenue grew 29% to $23.4 billion",
+        "Office 365 gained 12 million new subscriptions",
+        "Azure platform continues gaining market share in AI services"
+      ]
+    },
+    {
+      "article": "Climate scientists warn that Arctic ice is melting faster than previously predicted, with summer sea ice extent reaching a record low this year. Satellite data shows ice coverage has decreased by 13% per decade since 1979, accelerating ocean warming and disrupting global weather patterns. The rapid ice loss is creating a feedback loop where dark ocean water absorbs more heat than reflective ice, further accelerating warming. This has serious implications for global sea levels, potentially affecting coastal cities worldwide within decades. International climate experts are calling for immediate action to reduce greenhouse gas emissions to slow this alarming trend.",
+      "summary": [
+        "Arctic sea ice reached record low, melting 13% per decade",
+        "Ice loss creates warming feedback loop in ocean water",
+        "Scientists warn of serious implications for coastal cities"
+      ]
+    }
+  ],
+  "instructions": "These examples show good summaries that are concise, factual, and capture the most important points from each article. Each bullet point is under 15 words and focuses on key facts or outcomes."
+}

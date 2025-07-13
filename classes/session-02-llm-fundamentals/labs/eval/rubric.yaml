@@ -1,0 +1,78 @@
+# Promptfoo evaluation configuration for prompt engineering lab
+# Run with: promptfoo eval labs/eval/rubric.yaml
+
+description: "Prompt Engineering Lab - Compare different prompting patterns"
+
+providers:
+  - openai:gpt-4o-mini
+  - anthropic:claude-3-haiku-20240307
+
+prompts:
+  - file://prompts/zero_shot_template.txt
+  - file://prompts/fewshot_template.txt
+  - file://prompts/json_template.txt
+
+tests:
+  # Test 1: Basic summarization quality
+  - vars:
+      article: "{{file://prompts/article.txt}}"
+    assert:
+      - type: contains
+        value: "•"
+        description: "Output should contain bullet points"
+      - type: contains-any
+        value: ["AI", "banks", "customer", "service"]
+        description: "Should mention key topics from article"
+      - type: word-count-within
+        threshold: 100
+        description: "Summary should be concise (under 100 words)"
+
+  # Test 2: Structure validation
+  - vars:
+      article: "{{file://prompts/article.txt}}"
+    assert:
+      - type: contains
+        value: "•"
+        description: "Must use bullet points format"
+      - type: regex
+        value: "•.*•.*•"
+        description: "Should contain exactly 3 bullet points"
+
+  # Test 3: Content accuracy
+  - vars:
+      article: "{{file://prompts/article.txt}}"
+    assert:
+      - type: contains-all
+        value: ["40%", "cost reduction", "banks"]
+        description: "Should include key statistics and facts"
+      - type: not-contains
+        value: ["hallucination", "fictional", "made-up"]
+        description: "Should not contain obvious hallucinations"
+
+  # Test 4: JSON format validation (for JSON pattern only)
+  - vars:
+      article: "{{file://prompts/article.txt}}"
+    assert:
+      - type: is-json
+        description: "JSON pattern should return valid JSON"
+      - type: javascript
+        value: "JSON.parse(output).summary && JSON.parse(output).key_points"
+        description: "JSON should contain required fields"
+
+  # Test 5: Cost efficiency
+  - vars:
+      article: "{{file://prompts/article.txt}}"
+    assert:
+      - type: cost
+        threshold: 0.01
+        description: "Should cost less than $0.01 per request"
+      - type: latency
+        threshold: 10000
+        description: "Should respond within 10 seconds"
+
+# Evaluation metrics
+evaluate:
+  - accuracy
+  - conciseness  
+  - relevance
+  - format_compliance
