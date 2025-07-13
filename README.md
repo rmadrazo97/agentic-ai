@@ -91,6 +91,11 @@ Teams develop a domain-specific agent application (education, finance, dev-ops, 
 
 ## 📖 Course Materials
 
+- **[Tools & Resources Guide](TOOLS.md)** - Comprehensive collection of tools, references, and learning materials
+- All code templates and starter repositories provided
+- Access to LLM provider credits through academic programs
+- Recorded micro-lectures and documentation
+- Industry guest speakers and case studies
 
 ## 📬 Contact
 
